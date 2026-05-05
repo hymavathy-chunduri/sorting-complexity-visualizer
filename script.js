@@ -50,3 +50,42 @@ function merge(left, right) {
     }
     return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
 }
+
+function quickSort(arr) {
+    if (arr.length <= 1) return arr;
+    const items = [...arr];
+    const pivot = items[Math.floor(items.length / 2)];
+    const left = items.filter(x => x < pivot);
+    const middle = items.filter(x => x === pivot);
+    const right = items.filter(x => x > pivot);
+    return [...quickSort(left), ...middle, ...quickSort(right)];
+}
+
+function heapSort(arr) {
+    const items = [...arr];
+    const n = items.length;
+
+    for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
+        heapify(items, n, i);
+    }
+
+    for (let i = n - 1; i > 0; i--) {
+        [items[0], items[i]] = [items[i], items[0]];
+        heapify(items, i, 0);
+    }
+    return items;
+}
+
+function heapify(arr, n, i) {
+    let largest = i;
+    const l = 2 * i + 1;
+    const r = 2 * i + 2;
+
+    if (l < n && arr[l] > arr[largest]) largest = l;
+    if (r < n && arr[r] > arr[largest]) largest = r;
+
+    if (largest !== i) {
+        [arr[i], arr[largest]] = [arr[largest], arr[i]];
+        heapify(arr, n, largest);
+    }
+}
