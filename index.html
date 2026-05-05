@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Complexity Visualizer</title>
+    <meta name="description"
+        content="Compare the time complexity and performance of Bubble Sort, Merge Sort, Quick Sort, Insertion Sort, and Heap Sort in real-time.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+
+
+    <main class="container">
+        <header>
+            <h1>Sortify</h1>
+            <p class="subtitle">Compare sorting algorithms with your own data.</p>
+        </header>
+
+        <section class="controls glass">
+            <div class="input-group">
+                <label for="numberInput">Sequence of Numbers</label>
+                <input type="text" id="numberInput" placeholder="5, 2, 9, 1, 5, 6, 12, 4" autocomplete="off">
+                <small>Enter comma-separated numbers or use the presets.</small>
+            </div>
+
+            <div class="button-group">
+                <button id="compareBtn" class="primary-btn">Compare Algorithms</button>
+            </div>
+
+            <div class="sorted-output">
+                <h2>Sorted Sequence</h2>
+                <div id="sortedDisplay" class="sorted-box">
+                    <span class="empty-state">Numbers will appear here after sorting.</span>
+                </div>
+            </div>
+
+            <div class="results-output">
+                <h2>Execution Results</h2>
+                <div class="table-container">
+                    <table id="resultsTable">
+                        <thead>
+                            <tr>
+                                <th>Algorithm</th>
+                                <th>Average Complexity</th>
+                                <th>How Preferable</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultsBody">
+                            <tr>
+                                <td colspan="3" class="empty-state">No benchmarks run yet.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="algorithm-info glass">
+            <h2>Algorithm Insights</h2>
+            <div class="info-grid" id="infoGrid">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sorting Complexity Visualizer</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
