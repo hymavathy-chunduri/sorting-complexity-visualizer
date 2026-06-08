@@ -13,6 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap"
         rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -26,7 +27,6 @@
         </header>
 
         <section class="controls glass">
-            <div id="statusMessage" class="status-message"></div>
             <div class="input-group">
                 <label for="numberInput">Sequence of Numbers</label>
                 <input type="text" id="numberInput" placeholder="5, 2, 9, 1, 5, 6, 12, 4" autocomplete="off">
@@ -51,8 +51,8 @@
                         <thead>
                             <tr>
                                 <th>Algorithm</th>
-                                <th>Average Complexity</th>
-                                <th>How Preferable</th>
+                                <th>Best Case Complexity</th>
+                                <th>Execution Time</th>
                             </tr>
                         </thead>
                         <tbody id="resultsBody">
@@ -77,7 +77,7 @@
         <p>&copy; 2026 Sorting Complexity Visualizer</p>
     </footer>
 
-    <script src="script.js"></script>
+
 </body>
 
 </html>
