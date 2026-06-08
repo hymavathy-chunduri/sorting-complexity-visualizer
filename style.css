@@ -311,12 +311,3 @@ footer {
     color: var(--text-dim);
     font-size: 0.8rem;
 }
-.loading {
-    opacity: 0.7;
-    pointer-events: none;
-}
-.status-message {
-    margin-top: 12px;
-    color: var(--text-dim);
-    font-size: 0.9rem;
-}
